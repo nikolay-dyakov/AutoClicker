@@ -1,0 +1,33 @@
+# CMake and compiler output
+/build/
+/out/
+/cmake-build-*/
+/release/
+/release-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+install_manifest.txt
+*.ninja
+.ninja_*
+
+# Compiled files
+*.a
+*.dll
+*.exe
+*.ilk
+*.lib
+*.o
+*.obj
+*.pdb
+
+# Editors and local tooling
+/.idea/
+/.vscode/
+*.user
+
+# Operating system files
+.DS_Store
+Desktop.ini
+Thumbs.db
