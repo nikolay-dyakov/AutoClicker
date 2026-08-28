@@ -87,8 +87,8 @@ not published for download.
 Push a version tag to build and publish that exact revision on the GitHub Releases page:
 
 ```powershell
-git tag v2.1.0
-git push origin v2.1.0
+git tag v1.0.0
+git push origin v1.0.0
 ```
 
 Release tags must begin with `v`. Before publishing, configure a GitHub environment named `release`
