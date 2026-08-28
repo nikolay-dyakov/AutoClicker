@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(AutoClicker VERSION 2.1.0 LANGUAGES CXX RC)
+project(AutoClicker VERSION 1.0.0 LANGUAGES CXX RC)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -42,12 +42,7 @@ elseif (MINGW)
             -static
             -static-libgcc
             -static-libstdc++
-            -Wl,--gc-sections
-            -Wl,-u,__intrinsic_setjmpex
-            -Wl,-u,__ms_vsnprintf)
-    target_link_libraries(AutoClicker PRIVATE
-            ucrt
-            mingwex)
+            -Wl,--gc-sections)
 endif ()
 
 install(TARGETS AutoClicker RUNTIME DESTINATION .)
