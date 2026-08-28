@@ -43,12 +43,13 @@ jobs:
 
       - name: Publish GitHub Release
         shell: pwsh
+        working-directory: source
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "$env:GITHUB_REF_NAME" `
-            "package\AutoClicker.exe#AutoClicker.exe" `
-            "package\SHA256SUMS.txt#SHA256 checksum" `
+            "..\package\AutoClicker.exe#AutoClicker.exe" `
+            "..\package\SHA256SUMS.txt#SHA256 checksum" `
             --verify-tag `
             --generate-notes `
             --title "AutoClicker $env:GITHUB_REF_NAME"
